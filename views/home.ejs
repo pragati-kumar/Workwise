@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <body>
+        <p>
+            <h1> MY TODO LIST</h1>
+        </p>
+        
+            <form action="/task-add" method="POST">
+                
+                
+                <div id= "desc">
+                <h4>DESCRIPTION</h4>
+                <input type="text" name="description" placeholder="E.g. Finish the bootstrap module today" required>
+                </div>
+                <br>
+                
+                <div id= "category">
+                    <h4>CATEGORY</h4>
+                <select name="category">
+                    
+                    <option value="default">Choose a category</option>
+                    <option value="Personal">Personal</option>
+                    <option value="College">College</option>
+                    <option value="Coding">Coding</option>
+                    <option value="Debsoc">Debsoc</option>
+                </select>
+                </div>
+                <br>
+
+                <div id= "due-date">
+                    <label for="due">Due Date:</label>
+                    <input type="date" id="due-date" name="due">
+                </div>
+
+                  <button type="submit">ADD TASK</button>
+
+                  
+                  <div class= "del-button">
+                    <a href="/delete-task">
+                  <button type="button" onclick= "del()">DELETE TASK</button>
+                    </a>
+                </div>
+
+                  <div>             
+                        <% for(let t of tasks){ %>
+                            
+                            <input type="checkbox" name="display" id="display" class="check-box">
+            
+                                <div>
+                                    <label for="display-items">
+                                    <%= t.description %> <br>
+                                    <%= t.category%> <br>
+                                    (yyyy-mm-dd)<%= t.due%> <br>
+    
+                                    </label>
+                                </div>
+                               
+                        <%} %>
+                </div>                 
+            
+            </form>
+
+            <script type= "text/javascript" src="/javascript/javascript.js"></script>
+
+    </body>
+</html>
