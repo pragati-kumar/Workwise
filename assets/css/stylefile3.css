@@ -1,0 +1,62 @@
+/* output-section */
+
+
+/* striking off the option that has been checked by the user before deletion*/
+.check-box:checked + .strikethrough {
+    text-decoration: line-through;
+  }
+
+  .check-box{
+      width: 3vw;
+      height: 3vh;
+      margin-left: -1.5%;
+  }
+
+  #output-sec{
+      margin: 4% 0% 0% 0%;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.3rem;
+      background-color: deeppink;
+      /* box-shadow: 7px 5Px 5px 3Px white; */
+      width: 100%;
+      margin-top: 0%;
+      border-bottom: 2Px solid black;
+  }
+
+  #opdesc{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  #disp-cat{
+    height: 5vh;
+    width: 8vw;
+    font-size: 1rem;
+    font-weight: bold;
+    overflow: hidden;
+  }
+
+  /* colors matching each individual attribute */
+
+   .personal{
+      background-color: rgb(137, 228, 19);
+  }
+
+  .coding{
+    background-color: rgb(141, 16, 231);
+}
+
+.debsoc{
+    background-color:rgb(233, 18, 118);
+}
+
+.college{
+    background-color: rgb(223, 140, 32);
+}
+
+.other{
+    background-color: deepskyblue;
+} 
+

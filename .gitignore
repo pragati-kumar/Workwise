@@ -1,1 +1,2 @@
 node_modules/
+# heavy folder with limited usage and thus, is left in a place from where it can be extracted back as and when needed

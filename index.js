@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded()); //using a middleware
 app.use(express.static('assets')); 
 
-app.use("/", require("./routes"));
+app.use("/", require("./routers"));
 
 var taskData= [
     {
@@ -31,6 +31,7 @@ var taskData= [
     }
 ]
 
+//dynamic naming of the title attribute
 app.get('/', function(req ,res){
 
 
@@ -46,13 +47,7 @@ app.get('/', function(req ,res){
 
 });
 
-app.get('/practice', function(req ,res){
-
-    return res.render('practice', {
-        title: "My Practice Page"
-    });
-});
-
+//addition of task in the todo list
 app.post('/task-add', function(req, res){
     Task.create({
         description: req.body.description,
@@ -63,24 +58,10 @@ app.post('/task-add', function(req, res){
         {console.log('Error in creating a task'); return;}
 
         console.log('********', newTask);
-        return res.redirect('back');
-        
+        return res.redirect('back');       
     });
 
 });
-
-
-app.get('/delete-task', function(req, res){
-
-    // let id= req.query.id;
-    // Task.findByIdAndDelete()
-    // console.log(req.checked.params);
-    // let id= req.params.checked.id;
-
-   
-});
-
-// command+question mark
 
 
 //After setting up and using the libraries we need to setuo the server using the following code-

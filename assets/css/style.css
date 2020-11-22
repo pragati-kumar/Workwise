@@ -1,46 +1,107 @@
+/* toggle section */
 body{
-    display: flex;
-    flex-direction: column;
+    background-color: orange;
+}
+  
+  main{
+      width: 40vw;
+      margin: 3% 0% 0% 30%;
+      
+  }
+
+  section{
+      background-color: yellowgreen;
+      margin-bottom: 0%;
+      margin-top: -3%;
+      border-left: 2Px solid black;
+      border-right: 2Px solid black;
+  }
+
+  #toggle-sec{
+    display: inline-block;
     align-items: center;
-    justify-content: center;
-    /* background-color: #1C0C1C; */
-}
-
-input{
-    width: 35vw;
-    height: 5vh;
-    border-width: 0Px;
     font-size: 1rem;
-}
+    width: 99.25%;
+    text-align: center;
+    font-weight: normal;
+  }
 
-h4{
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: black;
-    margin-bottom: -0.5%;
-    margin-top: -0.3%;
-}
-h1{
-    display: block;
-}
+  h1{
+    background-color: deeppink;
+    margin-top: -2%;
+    border: 2Px solid black;
+    margin-left: -0.3%;
+    /* box-shadow: 7px 5Px 5px 5Px white; */
+    -webkit-box-shadow: 0 10px 100px white;
+        box-shadow: 0 100px 100px white;
+    font-size: 2rem;
+    height: 5%;
+    width: 100%;
+  }
 
-select{
-    width: 18vw;
-    height: 3vh;
-    font-size: 1rem;
-}
+  h2{
+    text-decoration: underline;
+  }
+  
 
-form{
-    /* background-color: #8C224A; */
-    width: 60vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-}
+  #toggle-sec div{
+      font-size: 1rem;
+  }
+  #mood{
+      font-weight: normal;   
+  }
 
-button{
-    width: 20vw;
-    height: 4vh;
-}
+  h5{
+      display: inline-block;
+      margin: 0% 3%;
+      font-size: 1.3rem;
+      font-weight: bold;
+  }
+
+  /* the classes that the the pre-existing ids/classes shall be replaced with are defined here */
+
+  .dark-mode {
+    background-color: midnightblue;
+    color: white;
+  }
+
+  .darkbod-mode {
+    background-color: darkviolet;
+    color: white;
+  }
+  
+  #btn-box
+   {height: 5vh;
+    width: 10vw;
+    margin: 5% 0% 0% 0%;
+    border: 2Px solid black;
+    background-color: white;
+    display: inline-block;
+   }
+  
+   #btn
+   {height: 75%;
+    width: 40%;
+    margin: 2%;
+    border: 2Px solid black;
+    background-color: black;
+   }
+  
+   .btn-new
+ {height: 90%;
+  width: 40%;
+  transform: translateX(125%);
+  margin: 2%;
+  border: 2Px solid black;
+  background-color: black;
+ }
+
+ .check-box{
+     display: flex;
+     flex-direction: row;
+     align-items: space-evenly;
+ } 
+
+ input{
+    border: 2Px solid black;
+ }
